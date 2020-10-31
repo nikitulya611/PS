@@ -13,8 +13,8 @@ namespace MyPhotoshop
             G = 0;
             B = 0;
         }
-        public double R;
-        public double G;
-        public double B;   
+        public double R { get; set; }
+        public double G { get; set; }
+        public double B { get; set; }   
     }
 }
