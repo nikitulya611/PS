@@ -39,6 +39,7 @@
   <ItemGroup>
     <Compile Include="Filters\ParameterInfo.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="Pixel.cs" />
     <Compile Include="Window\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
