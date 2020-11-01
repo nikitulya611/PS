@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MyPhotoshop
 {
@@ -9,14 +10,24 @@ namespace MyPhotoshop
 			width = _width;
 			height = _height;
 			data = new Pixel[width, height];
-			for (int x = 0; x < width; x++)
-				for (int y = 0; y < height; y++)
-					data[x, y] = new Pixel();
+        }
+
+		public Pixel this [int ind1, int ind2]
+        {
+			get
+            {
+				return data[ind1, ind2];
+            }
+
+            set
+            {
+				data[ind1, ind2] = value;
+            }
         }
 
 		public readonly int width;
 		public readonly int height;
-		public readonly Pixel[,] data;
+		private readonly Pixel[,] data;
 	}
 }
 

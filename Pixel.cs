@@ -5,11 +5,19 @@ using System.Text;
 
 namespace MyPhotoshop
 {
-    public class Pixel
+    public struct Pixel
     {
         private double r;
         private double g;
         private double b;
+
+        public Pixel(double _r, double _g, double _b)
+        {
+            r = g = b = 0;
+            R = _r;
+            G = _g;
+            B = _b;
+        }
 
         public static double Trim(double value)
         {
