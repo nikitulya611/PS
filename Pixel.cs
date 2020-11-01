@@ -18,6 +18,16 @@ namespace MyPhotoshop
             G = _g;
             B = _b;
         }
+        
+        public static Pixel operator *(Pixel p, double d)
+        {
+            return new Pixel(Pixel.Trim(p.R * d), Pixel.Trim(p.G * d), Pixel.Trim(p.B * d));
+        }
+
+        public static Pixel operator *(double d, Pixel p)
+        {
+            return new Pixel(Pixel.Trim(p.R * d), Pixel.Trim(p.G * d), Pixel.Trim(p.B * d));
+        }
 
         public static double Trim(double value)
         {
